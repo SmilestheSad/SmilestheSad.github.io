@@ -1,28 +1,91 @@
-import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
+import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import {motion} from "framer-motion"
+import { DARK_BLUE } from "../utils";
+import HeadingFromSide from "./HeadingFromSide";
 
-export const Projects = () => {
-  const items = [];
-  const [selectedId, setSelectedId] = useState(null);
-  const [item, setItem] = useState({title: "test", subtitle: "test"})
+const projectList = [
+  {
+    name: "CodeyBot",
+    date: "May 2022 - Curr",
+    descriptionPoints: ["test"],
+    githubLink: ``,
+    devpostLink: ``,
+  },
+  {
+    name: "Rowan House Course Platform",
+    date: "May 2022 - Curr",
+    descriptionPoints: ["test"],
+    githubLink: ``,
+    devpostLink: ``,
+  },
+  {
+    name: "Fread",
+    date: "May 2022 - Curr",
+    descriptionPoints: ["test"],
+    githubLink: ``,
+    devposLink: ``,
+  },
+  {
+    name: "MoodMSG",
+    date: "May 2022 - Curr",
+    descriptionPoints: ["test"],
+    githubLink: ``,
+    devpostLink: ``,
+  },
+  {
+    name: "ohmi",
+    date: "May 2022 - Curr",
+    descriptionPoints: ["test"],
+    githubLink: ``,
+    devpostLink: "test",
+  },
+  {
+    name: "WATonomous status page",
+    date: "May 2022 - Curr",
+    descriptionPoints: ["test"],
+    githubLink: ``,
+  },
+];
+
+const Project = ({ name, date, descriptionPoints, githubLink, devpostLink }) => {
   return (
-    <>
-      {items.map((item) => (
-        <motion.div layoutId={item.id} onClick={() => setSelectedId(item.id)}>
-          <motion.h5>{item.subtitle}</motion.h5>
-          <motion.h2>{item.title}</motion.h2>
-        </motion.div>
-      ))}
+    <motion.Box
+    backgroundColor="rgba(0, 0, 0, 0.1)"
+      margin="10px"
+      padding="20px"
+      borderRadius="10%"
+      color="black"
+      whileHover={{
+        scale: 1.1
+      }}
+    >
+      <Heading size="xl">{name}</Heading>
+      <Heading size="lg">{date}</Heading>
+      <Flex flexDirection="row">
+        <Image src="images/githublogo.png" />
+        {devpostLink && <Image src="images/devpostlogo.png" />}
+      </Flex>
+      {descriptionPoints.map(point => {
+        return <Text fontSize="3xl">&bull; {point}</Text>
 
-      <AnimatePresence>
-        {selectedId && (
-          <motion.div layoutId={selectedId}>
-            <motion.h5>{item.subtitle}</motion.h5>
-            <motion.h2>{item.title}</motion.h2>
-            <motion.button onClick={() => setSelectedId(null)} />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+      })}
+    </motion.Box>
+  );
+};
+export const Projects = () => {
+  return (
+    <Box marginTop="8vw">
+      <HeadingFromSide>
+        <Heading fontSize="6xl" padding="0 0 5vw 4vw">
+          Work Experience
+        </Heading>
+      </HeadingFromSide>
+      <SimpleGrid columns={[1, 2, 3]}>
+        {projectList.map((project) => {
+          return <Project {...project} />;
+        })}
+      </SimpleGrid>
+    </Box>
   );
 };

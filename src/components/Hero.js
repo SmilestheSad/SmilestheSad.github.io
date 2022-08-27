@@ -34,7 +34,7 @@ const Hero = () => {
           >
             <Heading fontSize="8xl">Hey! I'm Victor</Heading>
             <Heading fontSize="4xl">
-              I am{" "}
+              I am {" "}
               <Typed
                 strings={meDescriptors}
                 typeSpeed={40}

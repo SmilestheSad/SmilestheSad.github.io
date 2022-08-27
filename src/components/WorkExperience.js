@@ -1,10 +1,11 @@
-import { Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import HeadingFromSide from "./HeadingFromSide";
 
 const workExperiences = [
   {
@@ -27,8 +28,7 @@ const workExperiences = [
     title: "Full Stack Web Developer",
     company: "Tradable Bits",
     location: "Vancouver, BC",
-    description:
-      "collect data and analyze",
+    description: "collect data and analyze",
     date: "Jan 2022- Apr 2022",
     icon: "",
   },
@@ -49,12 +49,14 @@ const TimelineElement = ({
   description,
   date,
   icon,
+  last = false,
 }) => {
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
       date={date}
       icon={icon}
+      contentStyle={{ marginBottom: last ? "0" : "9vw" }}
       iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
     >
       <Heading fontSize="xl">{company}</Heading>
@@ -68,14 +70,20 @@ const TimelineElement = ({
 };
 
 const WorkExperience = () => {
-    return (
-      <>
-    <VerticalTimeline>
-      {workExperiences.map((work) => {
-        return <TimelineElement {...work} />;
-      })}
-    </VerticalTimeline>
-      </>
+  return (
+    <Box>
+      <HeadingFromSide>
+        <Heading fontSize="6xl" padding="0 0 5vw 4vw">
+          Work Experience
+        </Heading>
+      </HeadingFromSide>
+      <VerticalTimeline>
+        {workExperiences.map((work, idx) => {
+          const last = idx === workExperiences.length - 1;
+          return <TimelineElement last={last} {...work} />;
+        })}
+      </VerticalTimeline>
+    </Box>
   );
 };
 
