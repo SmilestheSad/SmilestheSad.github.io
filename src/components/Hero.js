@@ -20,16 +20,15 @@ const meDescriptors = [
 const Hero = () => {
   return (
     <Stack
-      direction="column"
       alignItems="center"
       height="100vh"
       backgroundColor="white"
     >
-      <Flex height="50vw" alignItems="center">
+      <Flex height="60%" alignItems="center">
         <Box paddingLeft="10vw">
           <motion.header
             initial={{ y: -150, opacity: 0 }}
-            animate={{ y: 20, opacity: 1 }}
+            animate={{ y: 40, opacity: 1 }}
             transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
           >
             <Heading fontSize="8xl">Hey! I'm Victor</Heading>
@@ -45,20 +44,19 @@ const Hero = () => {
             </Heading>
           </motion.header>
         </Box>
-        <Center width="50vw">
+        <Center width="50vw" marginTop="10vh">
           <Image src="/images/itsame.jpg" borderRadius="full" boxSize="md" />
         </Center>
       </Flex>
-      <Flex height="50%" width="100%" alignItems="flex-end">
+      <Flex height="40%" width="100%" alignItems="flex-end">
       <Wave fill={LIGHT_BLUE}
         paused={false}
         options={{
           height: 20,
-          amplitude: 10,
+          amplitude: 15,
           speed: 0.4,
           points: 4
-        }}
-  />
+        }}/>
       </Flex>
     </Stack>
   );

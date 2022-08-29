@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { Flex } from "@chakra-ui/react";
 
-const HeadingFromSide = ({ children }) => {
+const TextFromSide = ({ children }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {once: true});
 
@@ -22,4 +22,4 @@ const HeadingFromSide = ({ children }) => {
   );
 };
 
-export default HeadingFromSide
+export default TextFromSide

@@ -5,7 +5,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import HeadingFromSide from "./HeadingFromSide";
+import TextFromSide from "./animateWrappers/TextFromSide";
 
 const workExperiences = [
   {
@@ -72,11 +72,11 @@ const TimelineElement = ({
 const WorkExperience = () => {
   return (
     <Box>
-      <HeadingFromSide>
+      <TextFromSide>
         <Heading fontSize="6xl" padding="0 0 5vw 4vw">
           Work Experience
         </Heading>
-      </HeadingFromSide>
+      </TextFromSide>
       <VerticalTimeline>
         {workExperiences.map((work, idx) => {
           const last = idx === workExperiences.length - 1;
