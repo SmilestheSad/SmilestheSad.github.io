@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import {
   VerticalTimeline,
@@ -14,15 +14,15 @@ const workExperiences = [
     location: "Seattle, WA",
     description: "incoming :)",
     date: "Sep 2022 - Dec 2022",
-    icon: "/images/1password.png",
+    icon: "/images/vendia.png",
   },
   {
-    title: "Software Developer",
+    title: "Software Developer (contract part-time)",
     company: "somm.ai",
     location: "Remote",
     description: "incoming :)",
     date: "Sep 2022 - Dec 2022",
-    icon: "",
+    icon: "/images/sommai.jpeg",
   },
   {
     title: "Full Stack Web Developer",
@@ -30,7 +30,7 @@ const workExperiences = [
     location: "Vancouver, BC",
     description: "collect data and analyze",
     date: "Jan 2022- Apr 2022",
-    icon: "",
+    icon: "/images/tbits.png",
   },
   {
     title: "Software Developer",
@@ -38,7 +38,7 @@ const workExperiences = [
     location: "Toronto, ON",
     description: "make password work",
     date: "May - Aug 2021",
-    icon: "",
+    icon: "/images/1password.png",
   },
 ];
 
@@ -55,9 +55,9 @@ const TimelineElement = ({
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
       date={date}
-      icon={icon}
+      icon={<Image src={icon} borderRadius="50%"/>}
       contentStyle={{ marginBottom: last ? "0" : "9vw" }}
-      iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+      iconStyle={{ background: "white", color: "#fff" }}
     >
       <Heading fontSize="xl">{company}</Heading>
       <Heading fontSize="xl">{title}</Heading>
