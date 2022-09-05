@@ -1,5 +1,4 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import React from "react";
 import {
   VerticalTimeline,
@@ -14,7 +13,7 @@ const workExperiences = [
     company: "Vendia",
     location: "Seattle, WA",
     description: "incoming :)",
-    date: "Sep 2022 - Dec 2022",
+    date: "Sep 2022 - Present",
     icon: "/images/vendia.png",
     link: "https://www.vendia.net/"
   },
@@ -23,7 +22,7 @@ const workExperiences = [
     company: "somm.ai",
     location: "Remote",
     description: "incoming :)",
-    date: "Sep 2022 - Dec 2022",
+    date: "Sep 2022 - Present",
     icon: "/images/sommai.jpeg",
     link: "https://somm.ai/"
   },
