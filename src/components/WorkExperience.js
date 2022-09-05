@@ -1,4 +1,5 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
 import {
   VerticalTimeline,
@@ -15,6 +16,7 @@ const workExperiences = [
     description: "incoming :)",
     date: "Sep 2022 - Dec 2022",
     icon: "/images/vendia.png",
+    link: "https://www.vendia.net/"
   },
   {
     title: "Software Developer (contract part-time)",
@@ -23,22 +25,27 @@ const workExperiences = [
     description: "incoming :)",
     date: "Sep 2022 - Dec 2022",
     icon: "/images/sommai.jpeg",
+    link: "https://somm.ai/"
   },
   {
     title: "Full Stack Web Developer",
     company: "Tradable Bits",
     location: "Vancouver, BC",
-    description: "collect data and analyze",
+    description: `Built out data and marketing tools for people in the sports and music industries! Got to build for international music 
+    labels (it's a secret as to which ones :D), the Toronto Raptors, and the Maple Leafs.`,
     date: "Jan 2022- Apr 2022",
     icon: "/images/tbits.png",
+    link: "https://tradablebits.com/"
   },
   {
     title: "Software Developer",
     company: "1Password",
     location: "Toronto, ON",
-    description: "make password work",
+    description: `Worked on the administrator tooling team! Worked mostly on OAuth and our integrations, I spearheaded the new OAuth flow that is used 
+    in multiple integrations (Slack, Fastmail, Brex) and all future integrations. `,
     date: "May - Aug 2021",
     icon: "/images/1password.png",
+    link: "https://1password.com/"
   },
 ];
 
@@ -49,6 +56,7 @@ const TimelineElement = ({
   description,
   date,
   icon,
+  link,
   last = false,
 }) => {
   return (
@@ -57,7 +65,9 @@ const TimelineElement = ({
       date={date}
       icon={<Image src={icon} borderRadius="50%"/>}
       contentStyle={{ marginBottom: last ? "0" : "9vw" }}
-      iconStyle={{ background: "white", color: "#fff" }}
+      iconStyle={{ background: "white", color: "#fff", cursor: "pointer" }}
+      iconOnClick={() => window.location.href = link}
+      dateClassName="datestyle"
     >
       <Heading fontSize="xl">{company}</Heading>
       <Heading fontSize="xl">{title}</Heading>

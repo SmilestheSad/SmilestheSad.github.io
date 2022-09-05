@@ -8,14 +8,17 @@ import WorkExperience from "./components/WorkExperience";
 const App = () => {
   return (
     <ChakraProvider>
-      <Hero/>
+      <div id="stars" />
+      <div id="stars2" />
+      <div id="stars3" />
+      <Hero />
       {/* <Projects/> */}
       <Box height="40vh">
-      <WorkExperience/>
-      <Projects/>
+        <WorkExperience />
+        <Projects />
       </Box>
     </ChakraProvider>
   );
-}
+};
 
 export default App;

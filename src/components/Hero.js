@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Box, Center, Flex, Heading, Stack } from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, SimpleGrid, Stack } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import Typed from "react-typed";
 import Wave from "react-wavify";
 import { LIGHT_BLUE } from "../utils";
+import Mediabox from "./MediaBox";
 
 const meDescriptors = [
   "a software developer.",
@@ -28,11 +29,11 @@ const Hero = () => {
         <Box paddingLeft="10vw">
           <motion.header
             initial={{ y: -150, opacity: 0 }}
-            animate={{ y: 40, opacity: 1 }}
+            animate={{ y: 150, opacity: 1 }}
             transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
-          >
+            >
             <Heading fontSize="8xl">Hey! I'm Victor</Heading>
-            <Heading fontSize="4xl">
+            <Heading fontSize="4xl" marginBottom="2vw">
               I am {" "}
               <Typed
                 strings={meDescriptors}
@@ -40,8 +41,9 @@ const Hero = () => {
                 backSpeed={50}
                 loop
                 startDelay={700}
-              />
+                />
             </Heading>
+            <Mediabox/>
           </motion.header>
         </Box>
         <Center width="50vw" marginTop="10vh">

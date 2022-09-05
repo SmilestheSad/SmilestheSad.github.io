@@ -30,7 +30,7 @@ const techColors = {
 const projectList = [
   {
     name: "Rowan House Course Platform",
-    date: "May 2022 - Curr",
+    date: "May 2022 - Present",
     descriptionPoints: [
       "Building the course learning platform for Rowan House Society, an emergency shelter based in Southern Ontario",
       "Developed several course components such as headings and videos to be used in lessons seen by over 1400 students through their preventative education program",
@@ -41,7 +41,7 @@ const projectList = [
   },
   {
     name: "CodeyBot",
-    date: "May 2022 - Curr",
+    date: "Jan 2022 - Present",
     descriptionPoints: [
       "Working with 8 other developers to build CodeyBot, the Discord bot for the UWaterloo Computer Science Club of 2,300+ members",
       "Build user profile system using to connect like minded individuals and help people introduce themelves",
@@ -83,13 +83,13 @@ const projectList = [
   },
   {
     name: "ohmi",
-    date: "May 2022 - Curr",
+    date: "Jan 2021 - Jan 2021",
     descriptionPoints: [
       "Created a web app that allows users to synchronously send personalized favours to their friends",
       "Authenticated and stored user data using Firebase so users’ favours can be tracked and updated in real time",
     ],
     githubLink: "https://github.com/smilesthesad/ohmi",
-    technologies: ["React", "Firebase"]
+    technologies: ["React", "Firebase", "Ant Design"]
   },
 ];
 
@@ -154,7 +154,7 @@ export const Projects = () => {
         </Heading>
       </TextFromSide>
       <LayoutGroup>
-        <SimpleGrid columns={[1, 2]}>
+        <SimpleGrid columns={[1,1,1,2]}>
           {projectList.map((project) => {
             return <Project {...project} />;
           })}
