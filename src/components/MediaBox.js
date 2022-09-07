@@ -3,14 +3,16 @@ import {motion} from "framer-motion"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
-  faFacebook,
   faGithub,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFileLines
+} from "@fortawesome/free-solid-svg-icons"
 import { Flex, Link } from "@chakra-ui/react";
 
 
-const MediaLink = ({link, children}) => {
+export const MediaLink = ({link, children}) => {
     return (
         <Link
         href={link}
@@ -21,13 +23,13 @@ const MediaLink = ({link, children}) => {
             translateY: -10
         }}
         >
-          <FontAwesomeIcon icon={children} size="4x" />
+          <FontAwesomeIcon icon={children} size="3x" />
         </Link>
     )
 }
 const Mediabox = () => {
   return (
-    <Flex gap="1vw">
+    <Flex gap="1.5vw">
         <MediaLink link="https://www.linkedin.com/in/vzheng1">
             {faLinkedin}
         </MediaLink>
@@ -37,8 +39,8 @@ const Mediabox = () => {
         <MediaLink link="https://www.instagram.com/victorzheng231/">
             {faInstagram}
         </MediaLink>
-        <MediaLink link="https://www.facebook.com/victor.zheng.50">
-            {faFacebook}
+        <MediaLink link="/resume.pdf">
+            {faFileLines}
         </MediaLink>
     </Flex>
   );

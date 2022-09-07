@@ -17,13 +17,9 @@ import Mediabox from "./MediaBox";
 const meDescriptors = [
   "a software developer.",
   "an avid public speaker.",
-  "sleepy.",
+  "an athlete.",
   "pretty bad at chess.",
 ];
-
-// TODO
-// - Scroll down chevron
-// - Links to socials beneath avatar
 
 const Hero = () => {
   const [isLargerThan1280] = useMediaQuery("(min-width: 720px)");
@@ -74,8 +70,8 @@ const Hero = () => {
   return (
     <Stack alignItems="center" height="100vh" backgroundColor="white">
     <Flex height="60%" alignItems="center" flexDirection="column">
-      <Center width="80vw" marginTop="2vh">
-        <Image src="/images/itsame.jpg" borderRadius="100%" boxSize="sm" />
+      <Center width="90vw" marginTop="2vh">
+        <Image src="/images/itsame.jpg" borderRadius="100%" boxSize="xs" />
       </Center>
       <Box>
         <motion.header
@@ -83,9 +79,9 @@ const Hero = () => {
           animate={{ y: 35, opacity: 1 }}
           transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
         >
-          <Heading fontSize="5xl" textAlign="center">Hey! I'm Victor</Heading>
+          <Heading fontSize="4xl" textAlign="center">Hey! I'm Victor</Heading>
           <Center>
-          <Heading fontSize="3xl" marginBottom="0.5vh">
+          <Heading fontSize="2xl" marginBottom="0.5vh">
             I am{" "}
             <Typed
               strings={meDescriptors}

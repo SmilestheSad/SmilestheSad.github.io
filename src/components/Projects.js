@@ -3,8 +3,6 @@ import {
   Box,
   Flex,
   Heading,
-  Image,
-  Link,
   SimpleGrid,
   Tag,
   TagLabel,
@@ -12,19 +10,21 @@ import {
 } from "@chakra-ui/react";
 import { motion, LayoutGroup } from "framer-motion";
 import TextFromSide from "./animateWrappers/TextFromSide";
-import SlightRotateOnHover from "./animateWrappers/SlightRotateOnHover";
-
+import { MediaLink } from "./MediaBox";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 const techColors = {
-  TypeScript: "#397EF9",
-  React: "cyan",
-  "React Native": "cyan",
+  TypeScript: "#0C2E35",
+  React: "#599B99",
+  "React Native": "#599B99",
   SQLite: "#6299FA",
-  Python: "lightgreen",
-  JavaScript: "yellow",
-  Firebase: "#ffc847",
-  MongoDB: "#47ff75",
-  GraphQL: "#e535ab",
-  "Node.js": "#52E683",
+  Python: "#203223",
+  JavaScript: "#F4D991",
+  Firebase: "#AB5249",
+  MongoDB: "#7CAF8F",
+  GraphQL: "#4E493E",
+  "Node.js": "#7EB06C",
+  "Ant Design": "#A47439",
+  "Next.js": "#3D3B3D",
 };
 
 const projectList = [
@@ -37,7 +37,7 @@ const projectList = [
       "Implemented progress tracking in modules so students can keep track of where they are in lessons",
     ],
     githubLink: "https://github.com/uwblueprint/rowan-house",
-    technologies: ["React", "TypeScript", "Node.js", "GraphQL", "MongoDB"]
+    technologies: ["React", "TypeScript", "Node.js", "GraphQL", "MongoDB"],
   },
   {
     name: "CodeyBot",
@@ -69,17 +69,24 @@ const projectList = [
       "Developed a web app using the MERN stack to view previous messages analyzed on the Discord bot and the sentiments attached to them",
     ],
     githubLink: "https://github.com/ansonjwhe/MoodMSG",
-    technologies: ["Python", "React", "Node.js", "Express", "MongoDB", "Discord.js"]
+    technologies: [
+      "Python",
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Discord.js",
+    ],
   },
   {
-    name: "WATonomous status page",
+    name: "WATonomous Status Page",
     date: "Mar 2022 - Apr 2022",
     descriptionPoints: [
       "Worked with 6 other developers in implementing a real-time status page for WATonomous' server cluster, UWaterloo's autonomous vehicle team",
       "Added responsive modals that contain dynamically generated instructions to access all our available machines",
     ],
     githubLink: "https://github.com/WATonomous/status",
-    technologies: ["React", "Next.js"]
+    technologies: ["React", "Next.js"],
   },
   {
     name: "ohmi",
@@ -89,7 +96,7 @@ const projectList = [
       "Authenticated and stored user data using Firebase so users’ favours can be tracked and updated in real time",
     ],
     githubLink: "https://github.com/smilesthesad/ohmi",
-    technologies: ["React", "Firebase", "Ant Design"]
+    technologies: ["React", "Firebase", "Ant Design"],
   },
 ];
 
@@ -98,46 +105,45 @@ const Project = ({
   date,
   descriptionPoints,
   githubLink,
-  devpostLink,
   technologies,
 }) => {
   return (
     <Box
       as={motion.div}
-      borderRadius="10%"
-      margin="2vw"
+      borderRadius="2%"
+      margin="1vw"
       padding="2vw"
-      backgroundColor="rgba(255,255,255,0.3)"
+      backgroundColor="rgba(255,255,255,0.8)"
       whileHover={{
-        scale: 1.1,
+        scale: 1.05,
       }}
     >
-      <Heading size="xl">{name}</Heading>
-      <Heading size="lg">{date}</Heading>
-      <Flex flexDirection="row" justifyContent="space-evenly">
-        <SlightRotateOnHover>
-          <Link href={githubLink} marginRight="0">
-            <Image href={githubLink} src="images/githublogo.png" height="80%" />
-          </Link>
-        </SlightRotateOnHover>
-        {devpostLink && (
-          <SlightRotateOnHover>
-            <Link href={devpostLink} width="100%">
-              <Image src="images/devpost.png" height="80%" />
-            </Link>
-          </SlightRotateOnHover>
-        )}
-      </Flex>
+      <Box
+        float="right"
+        as={motion.div}
+        whileHover={{
+          rotate: 10,
+        }}
+      >
+        <MediaLink link={githubLink}>{faGithub}</MediaLink>
+      </Box>
+      <Heading size="lg">{name}</Heading>
+      <Heading color="#365C7E" size="md" marginBottom="1.75vw">
+        {date}
+      </Heading>
+      <Flex flexDirection="row" justifyContent="space-evenly"></Flex>
       {descriptionPoints.map((point) => {
-        return <Text fontSize="2xl">&bull; {point}</Text>;
+        return <Text fontSize="lg">&bull; {point}</Text>;
       })}
       <Box marginTop="1vw">
         {technologies &&
           technologies.map((tech) => {
-            const color = tech in techColors ? techColors[tech] : "white";
+            const color = tech in techColors ? techColors[tech] : "black";
             return (
               <Tag backgroundColor={color} size="lg" margin="2px">
-                <TagLabel>{tech}</TagLabel>
+                <TagLabel color="white" as="b">
+                  {tech}
+                </TagLabel>
               </Tag>
             );
           })}
@@ -149,12 +155,12 @@ export const Projects = () => {
   return (
     <Box margin="8vw 2vw 0 2vw">
       <TextFromSide>
-        <Heading fontSize="6xl" padding="0 0 5vw 4vw">
+        <Heading fontSize="6xl" padding="0 0 5vw 6vw">
           Projects
         </Heading>
       </TextFromSide>
       <LayoutGroup>
-        <SimpleGrid columns={[1,1,1,2]}>
+        <SimpleGrid columns={[1, 1, 2, 2,3]} margin="1vw 5vw">
           {projectList.map((project) => {
             return <Project {...project} />;
           })}

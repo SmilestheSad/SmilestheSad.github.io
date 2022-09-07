@@ -2,21 +2,17 @@ import "./App.css";
 import Hero from "./components/Hero";
 import { Projects } from "./components/Projects";
 import React from "react";
-import { Box, ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import WorkExperience from "./components/WorkExperience";
-
+import theme from "./theme";
+import Footer from "./components/Footer";
 const App = () => {
   return (
-    <ChakraProvider>
-      <div id="stars" />
-      <div id="stars2" />
-      <div id="stars3" />
+    <ChakraProvider theme={theme}>
       <Hero />
-      {/* <Projects/> */}
-      <Box height="40vh">
-        <WorkExperience />
-        <Projects />
-      </Box>
+      <WorkExperience />
+      <Projects />
+      <Footer/>
     </ChakraProvider>
   );
 };
