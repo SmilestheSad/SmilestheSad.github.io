@@ -28,14 +28,14 @@ const Hero = () => {
     return (
     <Stack alignItems="center" height="100vh" backgroundColor="white" >
       <Flex height="60%" alignItems="center" justifyContent="center">
-        <Box paddingLeft="10vw" width="40vw">
+        <Box paddingLeft="7vw" width="40vw">
           <motion.header
             initial={{ y: -150, opacity: 0 }}
             animate={{ y: 85, opacity: 1 }}
             transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
           >
             <Heading fontSize="7xl">Hey! I'm Victor</Heading>
-            <Heading fontSize="4xl" marginBottom="2vw">
+            <Heading fontSize="3xl" marginBottom="2vw">
               I am{" "}
               <Typed
                 strings={meDescriptors}
@@ -81,7 +81,7 @@ const Hero = () => {
         >
           <Heading fontSize="4xl" textAlign="center">Hey! I'm Victor</Heading>
           <Center>
-          <Heading fontSize="2xl" marginBottom="0.5vh">
+          <Heading fontSize="xl" marginBottom="0.5vh">
             I am{" "}
             <Typed
               strings={meDescriptors}
