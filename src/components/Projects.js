@@ -33,7 +33,7 @@ const projectList = [
     date: "May 2022 - Present",
     descriptionPoints: [
       "Building the course learning platform for Rowan House Society, an emergency shelter based in Southern Ontario",
-      "Developed several course components such as headings and videos to be used in lessons seen by over 1400 students through their preventative education program",
+      "Developed several course components such as headings and videos to be used in lessons seen by over 1,400 students through their preventative education program",
       "Implemented progress tracking in modules so students can keep track of where they are in lessons",
     ],
     githubLink: "https://github.com/uwblueprint/rowan-house",
@@ -82,8 +82,8 @@ const projectList = [
     name: "WATonomous Status Page",
     date: "Mar 2022 - Apr 2022",
     descriptionPoints: [
-      "Worked with 6 other developers in implementing a real-time status page for WATonomous' server cluster, UWaterloo's autonomous vehicle team",
-      "Added responsive modals that contain dynamically generated instructions to access all our available machines",
+      "Worked with 3 other developers in implementing a real-time status page for WATonomous' server cluster, UWaterloo's autonomous vehicle team",
+      "Added responsive modals that contain dynamically generated instructions to access all our available machines used by over 70 members",
     ],
     githubLink: "https://github.com/WATonomous/status",
     technologies: ["React", "Next.js"],

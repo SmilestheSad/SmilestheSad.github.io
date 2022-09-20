@@ -12,7 +12,7 @@ const workExperiences = [
     title: "Software Developer",
     company: "Vendia",
     location: "Seattle, WA",
-    description: "incoming :)",
+    description: "",
     date: "Sep 2022 - Present",
     icon: "/images/vendia.png",
     link: "https://www.vendia.net/"
@@ -21,7 +21,7 @@ const workExperiences = [
     title: "Software Developer (contract part-time)",
     company: "somm.ai",
     location: "Remote",
-    description: "incoming :)",
+    description: "",
     date: "Sep 2022 - Present",
     icon: "/images/sommai.jpeg",
     link: "https://somm.ai/"
