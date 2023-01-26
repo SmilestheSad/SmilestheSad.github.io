@@ -63,7 +63,7 @@ const projectList = [
   },
   {
     name: "MoodMSG",
-    date: "May 2022 - Curr",
+    date: "May 2022 - May 2022",
     descriptionPoints: [
       "Built a Discord bot using Python that analyzes the sentiment of messages sent in Discord servers using Cloud Natural Language API",
       "Developed a web app using the MERN stack to view previous messages analyzed on the Discord bot and the sentiments attached to them",
@@ -160,7 +160,7 @@ export const Projects = () => {
         </Heading>
       </TextFromSide>
       <LayoutGroup>
-        <SimpleGrid columns={[1, 1, 2, 2,3]} margin="1vw 5vw">
+        <SimpleGrid columns={[1, 1, 2, 2, 3]} margin="1vw 5vw">
           {projectList.map((project) => {
             return <Project {...project} />;
           })}
