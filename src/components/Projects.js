@@ -58,7 +58,7 @@ const projectList = [
       "Implemented ability to scan words through your camera and analyze them through Google's Natural Language API",
       "Added ability to revisit previously scanned words through Firestore",
     ],
-    githubLink: "https://github.com/smilesthesad/Fread",
+    githubLink: "https://github.com/victorzheng02/Fread",
     technologies: ["React Native", "Firebase"],
   },
   {
@@ -95,7 +95,7 @@ const projectList = [
       "Created a web app that allows users to synchronously send personalized favours to their friends",
       "Authenticated and stored user data using Firebase so users’ favours can be tracked and updated in real time",
     ],
-    githubLink: "https://github.com/smilesthesad/ohmi",
+    githubLink: "https://github.com/victorzheng02/ohmi",
     technologies: ["React", "Firebase", "Ant Design"],
   },
 ];
