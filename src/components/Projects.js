@@ -18,7 +18,7 @@ const techColors = {
   "React Native": "#599B99",
   SQLite: "#6299FA",
   Python: "#203223",
-  JavaScript: "#F4D991",
+  JavaScript: "#EBD834",
   Firebase: "#AB5249",
   MongoDB: "#7CAF8F",
   GraphQL: "#4E493E",
@@ -29,10 +29,21 @@ const techColors = {
 
 const projectList = [
   {
-    name: "Rowan House Course Platform",
-    date: "May 2022 - Present",
+    name: "WATonomous Finance System",
+    date: "Sep 2022 - Present",
     descriptionPoints: [
-      "Building the course learning platform for Rowan House Society, an emergency shelter based in Southern Ontario",
+      "Leading a team of 7 other developers to build a finance system for WATonomous, UWaterloo's autonomous vehicle team",
+      "Spearheaded system architecture, database design, and API design",
+      "Enabled team of 80 members to create, submit and get reimbursed for purchases with proper authorization",
+      "Automated sending of finance related emails, including receipts, reimbursement claims to funds, and item status updates",
+    ],
+    technologies: ["React", "JavaScript", "Node.js", "Express", "MongoDB"],
+  },
+  {
+    name: "Rowan House Course Platform",
+    date: "May 2022 - Oct 2022",
+    descriptionPoints: [
+      "Built the course learning platform for Rowan House Society, an emergency shelter based in Southern Ontario",
       "Developed several course components such as headings and videos to be used in lessons seen by over 1,400 students through their preventative education program",
       "Implemented progress tracking in modules so students can keep track of where they are in lessons",
     ],
@@ -41,7 +52,7 @@ const projectList = [
   },
   {
     name: "CodeyBot",
-    date: "Jan 2022 - Present",
+    date: "Jan 2022 - Dec 2022",
     descriptionPoints: [
       "Working with 8 other developers to build CodeyBot, the Discord bot for the UWaterloo Computer Science Club of 2,300+ members",
       "Build user profile system using to connect like minded individuals and help people introduce themelves",
@@ -49,17 +60,6 @@ const projectList = [
     ],
     githubLink: `https://github.com/uwcsc/codeybot`,
     technologies: ["TypeScript", "Node.js", "SQLite"],
-  },
-  {
-    name: "Fread",
-    date: "Apr 2021 - Aug 2021",
-    descriptionPoints: [
-      "Built a mobile app that helps individuals learn words they can't read when they're outside",
-      "Implemented ability to scan words through your camera and analyze them through Google's Natural Language API",
-      "Added ability to revisit previously scanned words through Firestore",
-    ],
-    githubLink: "https://github.com/victorzheng02/Fread",
-    technologies: ["React Native", "Firebase"],
   },
   {
     name: "MoodMSG",

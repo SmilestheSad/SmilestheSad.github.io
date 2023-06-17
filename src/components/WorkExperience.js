@@ -10,21 +10,32 @@ import TextFromSide from "./animateWrappers/TextFromSide";
 const workExperiences = [
   {
     title: "Software Developer",
+    company: "Intuit",
+    location: "Toronto, ON",
+    description: "Working on remote cloud workspaces. More details to come!",
+    date: "May 2023 - Present",
+    icon: "/images/intuit.jpg",
+    link: "https://www.intuit.com/",
+  },
+  {
+    title: "Software Developer",
     company: "Vendia",
     location: "Seattle, WA",
-    description: "",
-    date: "Sep 2022 - Present",
+    description: `Got to work on a cool project for a major airline alliance to ingest data from their Salesforce instances and fan out this data to other airlines.
+     Was one of the three primary developers on this project, and helped automate the sharing of over 1,200,000 records between these airlines.`,
+    date: "Sep 2022 - Apr 2023",
     icon: "/images/vendia.png",
-    link: "https://www.vendia.net/"
+    link: "https://www.vendia.net/",
   },
   {
     title: "Software Developer (contract part-time)",
     company: "somm.ai",
     location: "Remote",
-    description: "",
-    date: "Sep 2022 - Present",
+    description: `Many different tasks. Helped create various models to help classify menu items, maintained web apps for reviewing wines and viewing wine data, wrote 
+      scripts to run spreadsheets through various APIs`,
+    date: "Sep 2022 - Apr 2023",
     icon: "/images/sommai.jpeg",
-    link: "https://somm.ai/"
+    link: "https://somm.ai/",
   },
   {
     title: "Full Stack Web Developer",
@@ -34,7 +45,7 @@ const workExperiences = [
     labels (it's a secret as to which ones :D), the Toronto Raptors, and the Maple Leafs.`,
     date: "Jan 2022- Apr 2022",
     icon: "/images/tbits.png",
-    link: "https://tradablebits.com/"
+    link: "https://tradablebits.com/",
   },
   {
     title: "Software Developer",
@@ -44,7 +55,7 @@ const workExperiences = [
     in multiple integrations (Slack, Fastmail, Brex) and all future integrations. `,
     date: "May - Aug 2021",
     icon: "/images/1password.png",
-    link: "https://1password.com/"
+    link: "https://1password.com/",
   },
 ];
 
@@ -62,10 +73,10 @@ const TimelineElement = ({
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
       date={date}
-      icon={<Image src={icon} borderRadius="50%"/>}
+      icon={<Image src={icon} borderRadius="50%" />}
       contentStyle={{ marginBottom: last ? "0" : "9vw" }}
       iconStyle={{ background: "white", color: "#fff", cursor: "pointer" }}
-      iconOnClick={() => window.location.href = link}
+      iconOnClick={() => (window.location.href = link)}
       dateClassName="datestyle"
     >
       <Heading fontSize="xl">{company}</Heading>
