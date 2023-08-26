@@ -12,8 +12,10 @@ const workExperiences = [
     title: "Software Developer",
     company: "Intuit",
     location: "Toronto, ON",
-    description: "Working on remote cloud workspaces. More details to come!",
-    date: "May 2023 - Present",
+    description: `Worked on cloud workspaces, which is essentially remote docker. Don't have to worry about environment setup, just startin coding instantly. I
+    joined in pre-alpha, and I built many of the critical features like deleting and updating workspaces. I also worked on AZ selection for the workspaces, caching, and how
+    to grab secrets dynamically in our Kubernetes pods.`,
+    date: "May 2023 - Aug 2023",
     icon: "/images/intuit.jpg",
     link: "https://www.intuit.com/",
   },
