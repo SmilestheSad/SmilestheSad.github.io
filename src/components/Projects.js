@@ -72,6 +72,7 @@ const projectList = [
     technologies: [
       "Python",
       "React",
+      "JavaScript",
       "Node.js",
       "Express",
       "MongoDB",
@@ -86,7 +87,7 @@ const projectList = [
       "Added responsive modals that contain dynamically generated instructions to access all our available machines used by over 70 members",
     ],
     githubLink: "https://github.com/WATonomous/status",
-    technologies: ["React", "Next.js"],
+    technologies: ["React", "JavaScript", "Next.js"],
   },
   {
     name: "ohmi",
@@ -96,7 +97,7 @@ const projectList = [
       "Authenticated and stored user data using Firebase so users’ favours can be tracked and updated in real time",
     ],
     githubLink: "https://github.com/victorzheng02/ohmi",
-    technologies: ["React", "Firebase", "Ant Design"],
+    technologies: ["React", "JavaScript", "Firebase", "Ant Design"],
   },
 ];
 

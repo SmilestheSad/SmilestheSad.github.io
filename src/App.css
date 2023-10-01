@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 .vertical-timeline-element-date {
@@ -19,7 +19,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 0.75rem;
+  width: 0.6rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -28,5 +28,4 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: #6c88e1;
-  border-radius: 10px;
 }

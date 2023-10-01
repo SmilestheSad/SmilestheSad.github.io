@@ -76,7 +76,7 @@ const TimelineElement = ({
       className="vertical-timeline-element--work"
       date={date}
       icon={<Image src={icon} borderRadius="50%" />}
-      contentStyle={{ marginBottom: last ? "0" : "9vw" }}
+      contentStyle={{ marginBottom: last ? "0" : "2vw" }}
       iconStyle={{ background: "white", color: "#fff", cursor: "pointer" }}
       iconOnClick={() => (window.location.href = link)}
       dateClassName="datestyle"

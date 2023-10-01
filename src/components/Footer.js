@@ -8,7 +8,7 @@ const Footer = () => {
         Created by Victor Zheng
       </Text>
       <Text fontSize="smaller" as="b">
-        Last updated Aug 2023
+        Last updated Oct 2023
       </Text>
     </Center>
   );
